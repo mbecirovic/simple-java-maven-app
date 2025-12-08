@@ -6,6 +6,10 @@ pipeline {
         timestamps()
     }
 
+    tools {
+        maven 'Maven-3.9.11'
+    }
+
     parameters {
         booleanParam(name: 'SKIP_TESTS', defaultValue: false, description: 'Skip unit tests?')
     }
